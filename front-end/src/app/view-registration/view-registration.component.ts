@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ViewRegistrationComponent implements OnInit {
 
-  public bikeRegistration;
+  public bikeReg;
 
   constructor(private bikeService: BikeService, private route: ActivatedRoute) { }
 
@@ -20,7 +20,7 @@ export class ViewRegistrationComponent implements OnInit {
   getBikeRegistration(id: number){
     this.bikeService.getBike(id).subscribe(
       data => {
-        this.bikeRegistration = data;
+        this.bikeReg = data;
       },
       err => console.error(err),
       () => console.log("bikes loaded")
