@@ -11,6 +11,7 @@ import { ViewRegistrationComponent } from './view-registration/view-registration
 import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { CallbackComponent } from './callback/callback.component';
 import { AuthorizationService } from './authorization.service';
+import { AuthorizationGuard } from './authorization.guard';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AuthorizationService } from './authorization.service';
   ],
   providers: [
     BikeService,
-    AuthorizationService
+    AuthorizationService,
+    AuthorizationGuard
   ],
   bootstrap: [AppComponent]
 })

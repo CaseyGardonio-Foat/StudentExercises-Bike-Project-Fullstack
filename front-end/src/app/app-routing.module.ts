@@ -4,11 +4,12 @@ import { AdminComponent } from './admin/admin.component';
 import { CallbackComponent } from './callback/callback.component';
 import { HomeComponent } from './home/home.component';
 import { ViewRegistrationComponent } from './view-registration/view-registration.component';
+import { AuthorizationGuard } from './authorization.guard';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'admin/view/:id', component: ViewRegistrationComponent},
-  {path: 'admin', component: AdminComponent},
+  {path: 'admin/view/:id', component: ViewRegistrationComponent, canActivate: [AuthorizationGuard]},
+  {path: 'admin', component: AdminComponent, canActivate: [AuthorizationGuard]},
   {path: 'callback', component: CallbackComponent}
 ];
 
