@@ -8,6 +8,7 @@ import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { BikeService } from './bike.service';
 import { ViewRegistrationComponent } from './view-registration/view-registration.component';
+import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ViewRegistrationComponent } from './view-registration/view-registration
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [BikeService],
   bootstrap: [AppComponent]
