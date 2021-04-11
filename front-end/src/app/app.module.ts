@@ -9,13 +9,16 @@ import { HomeComponent } from './home/home.component';
 import { BikeService } from './bike.service';
 import { ViewRegistrationComponent } from './view-registration/view-registration.component';
 import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { CallbackComponent } from './callback/callback.component';
+import { AuthorizationService } from './authorization.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
     HomeComponent,
-    ViewRegistrationComponent
+    ViewRegistrationComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,10 @@ import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http'
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [BikeService],
+  providers: [
+    BikeService,
+    AuthorizationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
