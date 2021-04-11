@@ -8,8 +8,10 @@ import { AuthorizationGuard } from './authorization.guard';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'admin/view/:id', component: ViewRegistrationComponent, canActivate: [AuthorizationGuard]},
-  {path: 'admin', component: AdminComponent, canActivate: [AuthorizationGuard]},
+  // {path: 'admin/view/:id', component: ViewRegistrationComponent, canActivate: [AuthorizationGuard]},
+  {path: 'admin/view/:id', component: ViewRegistrationComponent},
+  // {path: 'admin', component: AdminComponent, canActivate: [AuthorizationGuard]},
+  {path: 'admin', component: AdminComponent},
   {path: 'callback', component: CallbackComponent}
 ];
 

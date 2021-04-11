@@ -40,14 +40,14 @@
 
 		<dependency>
 			<groupId>com.auth0</groupId>
-			<artifactId>spring-security-auth0</artifactId>
-			<version>1.0.0</version>
+			<artifactId>auth0-spring-security-api</artifactId>
+			<version>1.4.1</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.auth0</groupId>
-			<artifactId>auth0-spring-security-api</artifactId>
-			<version>1.4.1</version>
+			<artifactId>spring-security-auth0</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 
 		<dependency>
